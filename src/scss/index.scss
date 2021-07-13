@@ -1,0 +1,173 @@
+@import "reset";
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+* {
+  font-family: "Inter", system-ui;
+}
+
+.wrapper {
+  margin: 50px auto;
+  max-width: 1080px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  background: #fff;
+}
+
+header {
+  border-bottom: 1px solid #eaeaea;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.content {
+  h1 {
+    margin: 0;
+  }
+}
+
+.search-block {
+  padding: 0 15px;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+
+  input {
+    padding: 13px;
+    width: 200px;
+    border: 0;
+    font-size: 16px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.drawer {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 420px;
+  height: 100%;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  background: #fff;
+
+  h2 {
+    margin: 0;
+  }
+
+  .items {
+    flex: 1;
+    margin-bottom: 40px;
+    overflow: auto;
+  }
+}
+
+.cartTotalBlock {
+  ul {
+    margin-bottom: 20px !important;
+
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+
+      div {
+        position: relative;
+        top: -4px;
+        flex: 1;
+        margin: 0 10px;
+        height: 1px;
+        border-bottom: 1px dashed #dfdfdf;
+      }
+    }
+  }
+
+  .greenButton {
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      transition: transform 0.15s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.greenButton {
+  width: 100%;
+  height: 55px;
+  border: 0;
+  border-radius: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  background-color: #9dd558;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  svg {
+
+  }
+
+  &:hover {
+    background-color: lighten(#9dd558, 5%);
+  }
+
+  &:active {
+    background-color: darken(#9dd558, 5%);
+  }
+}
+
+.cartItem {
+  padding: 0 20px 10px;
+  overflow: hidden;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+
+  p {
+    font-size: 16px;
+  }
+
+  b {
+    font-size: 12px;
+  }
+
+  .removeBtn {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
